@@ -1,47 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping-Cart</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
 
-    <nav>
-      <h1>Clothing Land</h1>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping-Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
 
-    <div>
-        BALL
-        <button onclick="shoppingCart.addToCart('ball', 10, 1);">ADD</button>
-        <button onclick="shoppingCart.removeFromCart('ball');">REMOVE</button>
-        <button onclick="shoppingCart.decreaseQuantityByOne('ball');">DECREASE</button>
+<body>
+
+  <nav>
+
+    <h1>Clothing Land</h1>
+
+  </nav>
+
+  <div class="wrapper">
+
+    <div class="item">
+
+      <img src="img\hoodie.jpg">
+      <h3>Hoodie</h3>
+      <h4 class="price">25,50€</h4>
+      <button class="add-btn">Add to basket</button>
+
     </div>
-    <div>
-        T-SHIRT
-        <button onclick="shoppingCart.addToCart('t-shirt', 15, 1);">ADD</button>
-        <button onclick="shoppingCart.removeFromCart('t-shirt');">REMOVE</button>
-        <button onclick="shoppingCart.decreaseQuantityByOne('t-shirt');">DECREASE</button>
-    </div>
-    <div>
-        SHOES
-        <button onclick="shoppingCart.addToCart('shoes', 25, 1);">ADD</button>
-        <button onclick="shoppingCart.removeFromCart('shoes');">REMOVE</button>
-        <button onclick="shoppingCart.decreaseQuantityByOne('shoes');">DECREASE</button>
-    </div>
-    <div>
-        SHOPPING CART
-        <div id="addedProductsSection">
 
-        </div>
-        <div id="totalPurchaseSection">
+    <div class="item">
 
-        </div>
+      <img src="img\gloves.jpg">
+      <h3>Gloves</h3>
+      <h4 class="price">12,75€</h4>
+      <button class="add-btn">Add to basket</button>
+
     </div>
-    
 
-  </body>
+    <div class="item">
+
+      <img src="img\jacket.jpg">
+      <h3>Jacket</h3>
+      <h4 class="price">32,99€</h4>
+      <button class="add-btn">Add to basket</button>
+
+    </div>
+
+    <div class="item">
+
+      <img src="img\jeans.jpg">
+      <h3>jeans</h3>
+      <h4 class="price">24,95€</h4>
+      <button class="add-btn">Add to basket</button>
+
+    </div>
+
+    <div class="item">
+
+      <img src="img\scarf.jpg">
+      <h3>Scarf</h3>
+      <h4 class="price">9,55€</h4>
+      <button class="add-btn">Add to basket</button>
+
+    </div>
+
+    <div class="item">
+
+      <img src="img\t-shirt.jpg">
+      <h3>T-shirt</h3>
+      <h4 class="price">15,25€</h4>
+      <button class="add-btn">Add to basket</button>
+
+    </div>
+
+    <div class="item">
+
+      <img src="img\trainers.jpg">
+      <h3>Trainers</h3>
+      <h4 class="price">44,95€</h4>
+      <button class="add-btn">Add to basket</button>
+
+    </div>
+
+  </div>
+
+
+  <div>
+    BALL
+    <button onclick="shoppingCart.addToCart('ball', 10, 1);">ADD</button>
+    <button onclick="shoppingCart.removeFromCart('ball');">REMOVE</button>
+    <button onclick="shoppingCart.decreaseQuantityByOne('ball');">DECREASE</button>
+  </div>
+  <div>
+    T-SHIRT
+    <button onclick="shoppingCart.addToCart('t-shirt', 15, 1);">ADD</button>
+    <button onclick="shoppingCart.removeFromCart('t-shirt');">REMOVE</button>
+    <button onclick="shoppingCart.decreaseQuantityByOne('t-shirt');">DECREASE</button>
+  </div>
+  <div>
+    SHOES
+    <button onclick="shoppingCart.addToCart('shoes', 25, 1);">ADD</button>
+    <button onclick="shoppingCart.removeFromCart('shoes');">REMOVE</button>
+    <button onclick="shoppingCart.decreaseQuantityByOne('shoes');">DECREASE</button>
+  </div>
+  <div>
+    SHOPPING CART
+    <div id="addedProductsSection">
+
+    </div>
+    <div id="totalPurchaseSection">
+
+    </div>
+  </div>
+
+
+</body>
+
 </html>
