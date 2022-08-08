@@ -1,3 +1,5 @@
+/* Global style */
+
 ::-webkit-scrollbar {
     width: 7.5px;
 }
@@ -21,6 +23,20 @@ body {
     height: 100vh;
     background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
+
+.d-none {
+    display: none;
+}
+
+.my-4 {
+    margin-block: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Web style */
 
 nav {
     background: rgba(0, 0, 0, 0.15);
@@ -72,4 +88,84 @@ nav {
     cursor: pointer;
     background-color: lightgreen;
     letter-spacing: 2.5px;
+}
+
+/* Shopping cart style */
+
+.shopping-cart {
+    margin: 16px;
+    padding: 8px;
+    border: .5px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping-cart h2 {
+    margin-bottom: 8px;
+}
+
+.plus-btn {
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 0;
+    color: white;
+    transition: 225ms ease-in-out;
+}
+
+.plus-btn:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+.minus-btn {
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 0;
+    color: white;
+    transition: 225ms ease-in-out;
+}
+
+.minus-btn:hover {
+    cursor: pointer;
+    background-color: lightsalmon;
+}
+
+.remove-btn {
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 0;
+    color: white;
+    transition: 225ms ease-in-out;
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.total-purchase-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* For smartphones */
+
+@media (max-width: 500px) {
+	.item {
+        height: 150px;
+        min-width: 150px;
+    }
+
+    .item img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .font-reduced-mobile {
+        font-size: 10px;
+    }
 }
