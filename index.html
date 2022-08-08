@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping-Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <nav>
+      <h1>Clothing Land</h1>
+    </nav>
+
+    <div>
+        BALL
+        <button onclick="shoppingCart.addToCart('ball', 10, 1);">ADD</button>
+        <button onclick="shoppingCart.removeFromCart('ball');">REMOVE</button>
+        <button onclick="shoppingCart.decreaseQuantityByOne('ball');">DECREASE</button>
+    </div>
+    <div>
+        T-SHIRT
+        <button onclick="shoppingCart.addToCart('t-shirt', 15, 1);">ADD</button>
+        <button onclick="shoppingCart.removeFromCart('t-shirt');">REMOVE</button>
+        <button onclick="shoppingCart.decreaseQuantityByOne('t-shirt');">DECREASE</button>
+    </div>
+    <div>
+        SHOES
+        <button onclick="shoppingCart.addToCart('shoes', 25, 1);">ADD</button>
+        <button onclick="shoppingCart.removeFromCart('shoes');">REMOVE</button>
+        <button onclick="shoppingCart.decreaseQuantityByOne('shoes');">DECREASE</button>
+    </div>
+    <div>
+        SHOPPING CART
+        <div id="addedProductsSection">
+
+        </div>
+        <div id="totalPurchaseSection">
+
+        </div>
+    </div>
+    
+
+  </body>
+</html>

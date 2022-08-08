@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Trebuchet MS;
+}
+
+body {
+ 
+    height: 100vh;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.15);
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
