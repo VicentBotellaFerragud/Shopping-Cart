@@ -4,7 +4,13 @@ class ShoppingCart {
     prices = [];
     quantities = [];
 
-
+    /**
+     * If the cart does not contain the passed-in product yet, this function adds it. If, on the other hand, the product is already in the 
+     * cart, the function increases its quantity by one.
+     * @param {string} product - This is the passed-in product.
+     * @param {number} price - This is the passed-in price.
+     * @param {number} quantity - This is the passed-in quantity.
+     */
     addToCart(product, price, quantity) {
 
         let emptyCart = document.getElementById('emptyCart');
@@ -24,10 +30,15 @@ class ShoppingCart {
 
         }
         
-        this.displayShoppingCart();
+        this.displayShoppingCart(); //Updates the shopping cart.
 
     }
 
+    /**
+     * Removes the passed-in product from the cart if it's in the cart.
+     * @param {string} product - This is the passed-in product.
+     * @returns - nothing. The function just breaks if the passed-in product is no longer in the cart (in the products array).
+     */
     removeFromCart(product) {
 
         let index = this.products.indexOf(product);
@@ -44,10 +55,15 @@ class ShoppingCart {
 
         }
         
-        this.displayShoppingCart();
+        this.displayShoppingCart(); //Updates the shopping cart.
 
     }
 
+    /**
+     * Decreases by one the quantity of the passed-in product in the cart.
+     * @param {string} product - This is the passed-in product.
+     * @returns - nothing. The function just breaks if the passed-in product is no longer in the cart (in the products array).
+     */
     decreaseQuantityByOne(product) {
 
         let index = this.products.indexOf(product);
@@ -56,8 +72,10 @@ class ShoppingCart {
 
             this.quantities[index]--;
 
+            //If the quantity of the passed-in product becomes 0...
             if (this.quantities[index] === 0) {
 
+                //The removeFromCart function is called so that the product is removed from the cart.
                 this.removeFromCart(product);
 
             }
@@ -68,10 +86,14 @@ class ShoppingCart {
 
         }
         
-        this.displayShoppingCart();
+        this.displayShoppingCart(); //Updates the shopping cart.
 
     }
 
+    /**
+     * Calculates the total price of the order.
+     * @returns - the total price of the order.
+     */
     calculateTotal() {
 
         let total = 0;
@@ -80,7 +102,7 @@ class ShoppingCart {
 
             let price = this.prices[i];
             let quantity = this.quantities[i];
-            total += price * quantity;
+            total += price * quantity; //It's very important not to forget to multiply each price by its corresponding quantity.
 
         }
 
@@ -88,6 +110,10 @@ class ShoppingCart {
 
     }
 
+    /**
+     * Counts the total amount of products in the cart.
+     * @returns - the total amount of products in the cart.
+     */
     countProducts() {
 
         let count = 0;
@@ -103,6 +129,9 @@ class ShoppingCart {
 
     }
 
+    /**
+     * Displays, updates and hides the cart (its content) depending on the user's actions.
+     */
     displayShoppingCart() {
 
         let addedProductsSection = document.getElementById('addedProductsSection');
